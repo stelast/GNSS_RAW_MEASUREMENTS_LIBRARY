@@ -1,0 +1,14 @@
+/Users/lie/Documents/GnssMeasurementSample/GnssMeasurementSample/GnssMeasurementSample/bin/Debug/netstandard2.0/GnssMeasurementSample.deps.json
+/Users/lie/Documents/GnssMeasurementSample/GnssMeasurementSample/GnssMeasurementSample/bin/Debug/netstandard2.0/GnssMeasurementSample.dll
+/Users/lie/Documents/GnssMeasurementSample/GnssMeasurementSample/GnssMeasurementSample/bin/Debug/netstandard2.0/ref/GnssMeasurementSample.dll
+/Users/lie/Documents/GnssMeasurementSample/GnssMeasurementSample/GnssMeasurementSample/bin/Debug/netstandard2.0/GnssMeasurementSample.pdb
+/Users/lie/Documents/GnssMeasurementSample/GnssMeasurementSample/GnssMeasurementSample/obj/Debug/netstandard2.0/GnssMeasurementSample.csprojAssemblyReference.cache
+/Users/lie/Documents/GnssMeasurementSample/GnssMeasurementSample/GnssMeasurementSample/obj/Debug/netstandard2.0/App.xaml.g.cs
+/Users/lie/Documents/GnssMeasurementSample/GnssMeasurementSample/GnssMeasurementSample/obj/Debug/netstandard2.0/MainPage.xaml.g.cs
+/Users/lie/Documents/GnssMeasurementSample/GnssMeasurementSample/GnssMeasurementSample/obj/Debug/netstandard2.0/GnssMeasurementSample.AssemblyInfoInputs.cache
+/Users/lie/Documents/GnssMeasurementSample/GnssMeasurementSample/GnssMeasurementSample/obj/Debug/netstandard2.0/GnssMeasurementSample.AssemblyInfo.cs
+/Users/lie/Documents/GnssMeasurementSample/GnssMeasurementSample/GnssMeasurementSample/obj/Debug/netstandard2.0/GnssMeasurementSample.csproj.CoreCompileInputs.cache
+/Users/lie/Documents/GnssMeasurementSample/GnssMeasurementSample/GnssMeasurementSample/obj/Debug/netstandard2.0/XamlC.stamp
+/Users/lie/Documents/GnssMeasurementSample/GnssMeasurementSample/GnssMeasurementSample/obj/Debug/netstandard2.0/GnssMeasurementSample.dll
+/Users/lie/Documents/GnssMeasurementSample/GnssMeasurementSample/GnssMeasurementSample/obj/Debug/netstandard2.0/ref/GnssMeasurementSample.dll
+/Users/lie/Documents/GnssMeasurementSample/GnssMeasurementSample/GnssMeasurementSample/obj/Debug/netstandard2.0/GnssMeasurementSample.pdb

@@ -1,0 +1,328 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{6C8E626B-A885-4214-B6DF-50A8BDDFB97C}</ProjectGuid>
+    <ProjectTypeGuids>{EFBA0AD7-5A72-4C68-AF49-83D382785DCF};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <TemplateGuid>{c9e5eea5-ca05-42a1-839b-61506e0a37df}</TemplateGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>GnssMeasurementSample.Droid</RootNamespace>
+    <AssemblyName>GnssMeasurementSample.Android</AssemblyName>
+    <Deterministic>True</Deterministic>
+    <AndroidApplication>True</AndroidApplication>
+    <AndroidResgenFile>Resources\Resource.designer.cs</AndroidResgenFile>
+    <AndroidResgenClass>Resource</AndroidResgenClass>
+    <AndroidManifest>Properties\AndroidManifest.xml</AndroidManifest>
+    <MonoAndroidResourcePrefix>Resources</MonoAndroidResourcePrefix>
+    <MonoAndroidAssetsPrefix>Assets</MonoAndroidAssetsPrefix>
+    <TargetFrameworkVersion>v9.0</TargetFrameworkVersion>
+    <AndroidEnableSGenConcurrent>true</AndroidEnableSGenConcurrent>
+    <AndroidUseAapt2>true</AndroidUseAapt2>
+    <AndroidHttpClientHandlerType>Xamarin.Android.Net.AndroidClientHandler</AndroidHttpClientHandlerType>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>portable</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AndroidLinkMode>None</AndroidLinkMode>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>portable</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AndroidManagedSymbols>true</AndroidManagedSymbols>
+    <AndroidUseSharedRuntime>false</AndroidUseSharedRuntime>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Mono.Android" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Google.Protobuf">
+      <Version>3.14.0</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.Forms" Version="4.8.0.1451" />
+    <PackageReference Include="Xamarin.Essentials" Version="1.5.3.2" />
+    <PackageReference Include="Xamarin.GooglePlayServices.Location">
+      <Version>71.1600.4</Version>
+    </PackageReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="GnssCompare.cs" />
+    <Compile Include="GnssCompareLibrary\Constants.cs" />
+    <Compile Include="GnssCompareLibrary\Constellations\Constellation.cs" />
+    <Compile Include="GnssCompareLibrary\Constellations\GnssCoreService.cs" />
+    <Compile Include="GnssCompareLibrary\Constellations\Rinex\BroadcastGGTO.cs" />
+    <Compile Include="GnssCompareLibrary\Constellations\Rinex\EphemerisResponse.cs" />
+    <Compile Include="GnssCompareLibrary\Constellations\Rinex\EphemerisSystem.cs" />
+    <Compile Include="GnssCompareLibrary\Constellations\EphGps.cs" />
+    <Compile Include="GnssCompareLibrary\Constellations\GalileoConstellation.cs" />
+    <Compile Include="GnssCompareLibrary\Constellations\GnssEphemeris.cs" />
+    <Compile Include="GnssCompareLibrary\Constellations\GpsEphemeris.cs" />
+    <Compile Include="GnssCompareLibrary\Constellations\KeplerianEphemeris.cs" />
+    <Compile Include="GnssCompareLibrary\Constellations\KeplerianModel.cs" />
+    <Compile Include="GnssCompareLibrary\Constellations\Rinex\RinexNavigationGps.cs" />
+    <Compile Include="GnssCompareLibrary\Constellations\Rinex\RinexNavigationParserGps.cs" />
+    <Compile Include="GnssCompareLibrary\Constellations\Rinex\IonoGalileo.cs" />
+    <Compile Include="GnssCompareLibrary\Constellations\Rinex\NavigationProducer.cs" />
+    <Compile Include="GnssCompareLibrary\Constellations\Rinex\ObservationSet.cs" />
+    <Compile Include="GnssCompareLibrary\Constellations\Rinex\RinexNavigationGalileo.cs" />
+    <Compile Include="GnssCompareLibrary\Constellations\Rinex\SampleRinex.cs" />
+    <Compile Include="GnssCompareLibrary\Constellations\Rinex\StreamResource.cs" />
+    <Compile Include="GnssCompareLibrary\Constellations\Rinex\SuplConnectionRequest.cs" />
+    <Compile Include="GnssCompareLibrary\Constellations\Rinex\SuplController.cs" />
+    <Compile Include="GnssCompareLibrary\Constellations\Time.cs" />
+    <Compile Include="GnssCompareLibrary\Coordinates.cs" />
+    <Compile Include="GnssCompareLibrary\Corrections\Correction.cs" />
+    <Compile Include="GnssCompareLibrary\Corrections\IonoCorrection.cs" />
+    <Compile Include="GnssCompareLibrary\Corrections\IonoGps.cs" />
+    <Compile Include="GnssCompareLibrary\Corrections\ShapiroCorrection.cs" />
+    <Compile Include="GnssCompareLibrary\Corrections\TropoCorrection.cs" />
+    <Compile Include="GnssCompareLibrary\Constellations\GpsConstellation.cs" />
+    <Compile Include="GnssCompareLibrary\Observations.cs" />
+    <Compile Include="GnssCompareLibrary\Pseudorange.cs" />
+    <Compile Include="GnssCompareLibrary\PvtMethods\DynamicExtendedKalmanFilter.cs" />
+    <Compile Include="GnssCompareLibrary\PvtMethods\PedrestianStaticExtendedKalmanFilter.cs" />
+    <Compile Include="GnssCompareLibrary\PvtMethods\PvtMethod.cs" />
+    <Compile Include="GnssCompareLibrary\PvtMethods\StaticExtendedKalmanFilter.cs" />
+    <Compile Include="GnssCompareLibrary\PvtMethods\WeightedLeastSquares.cs" />
+    <Compile Include="GnssCompareLibrary\SatelliteParameters.cs" />
+    <Compile Include="GnssCompareLibrary\SatellitePosition.cs" />
+    <Compile Include="GnssCompareLibrary\Streamable.cs" />
+    <Compile Include="GnssCompareLibrary\TopocentricCoordinates.cs" />
+    <Compile Include="GnssCompareLibrary\Utils\Simple\AutomaticSimpleMatrixConvert.cs" />
+    <Compile Include="GnssCompareLibrary\Utils\Simple\ConvertToDenseException.cs" />
+    <Compile Include="GnssCompareLibrary\Utils\Simple\ConvertToImaginaryException.cs" />
+    <Compile Include="GnssCompareLibrary\Utils\Simple\data\Arrays.cs" />
+    <Compile Include="GnssCompareLibrary\Utils\Simple\data\BMatrixRMaj.cs" />
+    <Compile Include="GnssCompareLibrary\Utils\Simple\data\ComplexMath_F64.cs" />
+    <Compile Include="GnssCompareLibrary\Utils\Simple\data\ComplexPolar_F64.cs" />
+    <Compile Include="GnssCompareLibrary\Utils\Simple\data\Complex_F64.cs" />
+    <Compile Include="GnssCompareLibrary\Utils\Simple\data\DConvertArrays.cs" />
+    <Compile Include="GnssCompareLibrary\Utils\Simple\data\decomposition\DecompositionInterface.cs" />
+    <Compile Include="GnssCompareLibrary\Utils\Simple\data\DEigenpair.cs" />
+    <Compile Include="GnssCompareLibrary\Utils\Simple\data\DGrowArray.cs" />
+    <Compile Include="GnssCompareLibrary\Utils\Simple\data\DMatrix.cs" />
+    <Compile Include="GnssCompareLibrary\Utils\Simple\data\DMatrix1Row.cs" />
+    <Compile Include="GnssCompareLibrary\Utils\Simple\data\DMatrix2.cs" />
+    <Compile Include="GnssCompareLibrary\Utils\Simple\data\DMatrix2x2.cs" />
+    <Compile Include="GnssCompareLibrary\Utils\Simple\data\DMatrix3.cs" />
+    <Compile Include="GnssCompareLibrary\Utils\Simple\data\DMatrix3x3.cs" />
+    <Compile Include="GnssCompareLibrary\Utils\Simple\data\DMatrix4.cs" />
+    <Compile Include="GnssCompareLibrary\Utils\Simple\data\DMatrix4x4.cs" />
+    <Compile Include="GnssCompareLibrary\Utils\Simple\data\DMatrix5.cs" />
+    <Compile Include="GnssCompareLibrary\Utils\Simple\data\DMatrix5x5.cs" />
+    <Compile Include="GnssCompareLibrary\Utils\Simple\data\DMatrix6.cs" />
+    <Compile Include="GnssCompareLibrary\Utils\Simple\data\DMatrix6x6.cs" />
+    <Compile Include="GnssCompareLibrary\Utils\Simple\data\DMatrixD1.cs" />
+    <Compile Include="GnssCompareLibrary\Utils\Simple\data\DMatrixFixed.cs" />
+    <Compile Include="GnssCompareLibrary\Utils\Simple\data\DMatrixIterator.cs" />
+    <Compile Include="GnssCompareLibrary\Utils\Simple\data\DMatrixRBlock.cs" />
+    <Compile Include="GnssCompareLibrary\Utils\Simple\data\DMatrixRMaj.cs" />
+    <Compile Include="GnssCompareLibrary\Utils\Simple\data\DMatrixSparse.cs" />
+    <Compile Include="GnssCompareLibrary\Utils\Simple\data\DMatrixSparseCSC.cs" />
+    <Compile Include="GnssCompareLibrary\Utils\Simple\data\DMatrixSparseTriplet.cs" />
+    <Compile Include="GnssCompareLibrary\Utils\Simple\data\DScalar.cs" />
+    <Compile Include="GnssCompareLibrary\Utils\Simple\data\DSubmatrixD1.cs" />
+    <Compile Include="GnssCompareLibrary\Utils\Simple\data\EjmlParameters.cs" />
+    <Compile Include="GnssCompareLibrary\Utils\Simple\data\ElementLocation.cs" />
+    <Compile Include="GnssCompareLibrary\Utils\Simple\data\IGrowArray.cs" />
+    <Compile Include="GnssCompareLibrary\Utils\Simple\data\IScalar.cs" />
+    <Compile Include="GnssCompareLibrary\Utils\Simple\data\LinearSolverChol_ZDRM.cs" />
+    <Compile Include="GnssCompareLibrary\Utils\Simple\data\LinearSolverLu_ZDRM.cs" />
+    <Compile Include="GnssCompareLibrary\Utils\Simple\data\linsol\LinearSolver.cs" />
+    <Compile Include="GnssCompareLibrary\Utils\Simple\data\linsol\LinearSolverDense.cs" />
+    <Compile Include="GnssCompareLibrary\Utils\Simple\data\linsol\LinearSolverSafe.cs" />
+    <Compile Include="GnssCompareLibrary\Utils\Simple\data\linsol\LinearSolverSparse.cs" />
+    <Compile Include="GnssCompareLibrary\Utils\Simple\data\linsol\LinearSolverSparseSafe.cs" />
+    <Compile Include="GnssCompareLibrary\Utils\Simple\data\Matrix.cs" />
+    <Compile Include="GnssCompareLibrary\Utils\Simple\data\MatrixDimensionException.cs" />
+    <Compile Include="GnssCompareLibrary\Utils\Simple\data\MatrixIO.cs" />
+    <Compile Include="GnssCompareLibrary\Utils\Simple\data\MatrixSparse.cs" />
+    <Compile Include="GnssCompareLibrary\Utils\Simple\data\MatrixType.cs" />
+    <Compile Include="GnssCompareLibrary\Utils\Simple\data\QuickSort_S32.cs" />
+    <Compile Include="GnssCompareLibrary\Utils\Simple\data\ReshapeMatrix.cs" />
+    <Compile Include="GnssCompareLibrary\Utils\Simple\data\SingularMatrixException.cs" />
+    <Compile Include="GnssCompareLibrary\Utils\Simple\data\SortCoupledArray_F64.cs" />
+    <Compile Include="GnssCompareLibrary\Utils\Simple\data\Submatrix.cs" />
+    <Compile Include="GnssCompareLibrary\Utils\Simple\data\UtilEjml.cs" />
+    <Compile Include="GnssCompareLibrary\Utils\Simple\data\ZMatrix.cs" />
+    <Compile Include="GnssCompareLibrary\Utils\Simple\data\ZMatrixD1.cs" />
+    <Compile Include="GnssCompareLibrary\Utils\Simple\data\ZMatrixRMaj.cs" />
+    <Compile Include="GnssCompareLibrary\Utils\Simple\ops\BaseDecomposition_DDRB_to_DDRM.cs" />
+    <Compile Include="GnssCompareLibrary\Utils\Simple\ops\BlockHouseHolder_DDRB.cs" />
+    <Compile Include="GnssCompareLibrary\Utils\Simple\ops\CholeskyBlockHelper_DDRM.cs" />
+    <Compile Include="GnssCompareLibrary\Utils\Simple\ops\CholeskyDecomposition.cs" />
+    <Compile Include="GnssCompareLibrary\Utils\Simple\ops\CholeskyDecompositionBlock_DDRM.cs" />
+    <Compile Include="GnssCompareLibrary\Utils\Simple\ops\CholeskyDecompositionCommon_DDRM.cs" />
+    <Compile Include="GnssCompareLibrary\Utils\Simple\ops\CholeskyDecompositionCommon_ZDRM.cs" />
+    <Compile Include="GnssCompareLibrary\Utils\Simple\ops\CholeskyDecompositionInner_DDRM.cs" />
+    <Compile Include="GnssCompareLibrary\Utils\Simple\ops\CholeskyDecompositionInner_ZDRM.cs" />
+    <Compile Include="GnssCompareLibrary\Utils\Simple\ops\CholeskyDecomposition_DDRB_to_DDRM.cs" />
+    <Compile Include="GnssCompareLibrary\Utils\Simple\ops\CholeskyDecomposition_F64.cs" />
+    <Compile Include="GnssCompareLibrary\Utils\Simple\ops\CholeskyOuterForm_DDRB.cs" />
+    <Compile Include="GnssCompareLibrary\Utils\Simple\ops\CholeskyOuterSolver_DDRB.cs" />
+    <Compile Include="GnssCompareLibrary\Utils\Simple\ops\CommonOps_DDRM.cs" />
+    <Compile Include="GnssCompareLibrary\Utils\Simple\ops\CommonOps_ZDRM.cs" />
+    <Compile Include="GnssCompareLibrary\Utils\Simple\ops\ConcurrencyOps.cs" />
+    <Compile Include="GnssCompareLibrary\Utils\Simple\ops\ConvertMatrixData.cs" />
+    <Compile Include="GnssCompareLibrary\Utils\Simple\ops\ConvertMatrixType.cs" />
+    <Compile Include="GnssCompareLibrary\Utils\Simple\ops\CovarianceRandomDraw_DDRM.cs" />
+    <Compile Include="GnssCompareLibrary\Utils\Simple\ops\DConvertMatrixStruct.cs" />
+    <Compile Include="GnssCompareLibrary\Utils\Simple\ops\DecompositionFactory_DDRM.cs" />
+    <Compile Include="GnssCompareLibrary\Utils\Simple\ops\DGrowArray.cs" />
+    <Compile Include="GnssCompareLibrary\Utils\Simple\ops\DOperatorUnary.cs" />
+    <Compile Include="GnssCompareLibrary\Utils\Simple\ops\EigenDecomposition.cs" />
+    <Compile Include="GnssCompareLibrary\Utils\Simple\ops\EigenDecomposition_F64.cs" />
+    <Compile Include="GnssCompareLibrary\Utils\Simple\ops\GrowArray.cs" />
+    <Compile Include="GnssCompareLibrary\Utils\Simple\ops\ImplCommonOps_DDMA.cs" />
+    <Compile Include="GnssCompareLibrary\Utils\Simple\ops\ImplCommonOps_DDRM.cs" />
+    <Compile Include="GnssCompareLibrary\Utils\Simple\ops\InnerCholesky_DDRB.cs" />
+    <Compile Include="GnssCompareLibrary\Utils\Simple\ops\InnerMultiplication_DDRB.cs" />
+    <Compile Include="GnssCompareLibrary\Utils\Simple\ops\InnerRankUpdate_DDRB.cs" />
+    <Compile Include="GnssCompareLibrary\Utils\Simple\ops\InnerTriangularSolver_DDRB.cs" />
+    <Compile Include="GnssCompareLibrary\Utils\Simple\ops\InvertUsingSolve_DDRM.cs" />
+    <Compile Include="GnssCompareLibrary\Utils\Simple\ops\InvertUsingSolve_ZDRM.cs" />
+    <Compile Include="GnssCompareLibrary\Utils\Simple\ops\LinearSolverAbstract_DDRM.cs" />
+    <Compile Include="GnssCompareLibrary\Utils\Simple\ops\LinearSolverAbstract_ZDRM.cs" />
+    <Compile Include="GnssCompareLibrary\Utils\Simple\ops\LinearSolverChol_DDRB.cs" />
+    <Compile Include="GnssCompareLibrary\Utils\Simple\ops\LinearSolverChol_DDRM.cs" />
+    <Compile Include="GnssCompareLibrary\Utils\Simple\ops\LinearSolverFactory_DDRM.cs" />
+    <Compile Include="GnssCompareLibrary\Utils\Simple\ops\LinearSolverFactory_ZDRM.cs" />
+    <Compile Include="GnssCompareLibrary\Utils\Simple\ops\LinearSolverLuBase_DDRM.cs" />
+    <Compile Include="GnssCompareLibrary\Utils\Simple\ops\LinearSolverLu_DDRM.cs" />
+    <Compile Include="GnssCompareLibrary\Utils\Simple\ops\LinearSolverQrBlock64_DDRM.cs" />
+    <Compile Include="GnssCompareLibrary\Utils\Simple\ops\LinearSolverQrHouseCol_DDRM.cs" />
+    <Compile Include="GnssCompareLibrary\Utils\Simple\ops\LinearSolverQrHouseCol_ZDRM.cs" />
+    <Compile Include="GnssCompareLibrary\Utils\Simple\ops\LinearSolver_DDRB_to_DDRM.cs" />
+    <Compile Include="GnssCompareLibrary\Utils\Simple\ops\LUDecomposition.cs" />
+    <Compile Include="GnssCompareLibrary\Utils\Simple\ops\LUDecompositionAlt_DDRM.cs" />
+    <Compile Include="GnssCompareLibrary\Utils\Simple\ops\LUDecompositionAlt_ZDRM.cs" />
+    <Compile Include="GnssCompareLibrary\Utils\Simple\ops\LUDecompositionBase_DDRM.cs" />
+    <Compile Include="GnssCompareLibrary\Utils\Simple\ops\LUDecompositionBase_ZDRM.cs" />
+    <Compile Include="GnssCompareLibrary\Utils\Simple\ops\LUDecomposition_F64.cs" />
+    <Compile Include="GnssCompareLibrary\Utils\Simple\ops\MatrixFeatures_DDRM.cs" />
+    <Compile Include="GnssCompareLibrary\Utils\Simple\ops\MatrixFeatures_ZDRM.cs" />
+    <Compile Include="GnssCompareLibrary\Utils\Simple\ops\MatrixMatrixMult_DDRM.cs" />
+    <Compile Include="GnssCompareLibrary\Utils\Simple\ops\MatrixMatrixMult_ZDRM.cs" />
+    <Compile Include="GnssCompareLibrary\Utils\Simple\ops\MatrixMultProduct_DDRM.cs" />
+    <Compile Include="GnssCompareLibrary\Utils\Simple\ops\MatrixMult_DDRB.cs" />
+    <Compile Include="GnssCompareLibrary\Utils\Simple\ops\MatrixOps_DDRB.cs" />
+    <Compile Include="GnssCompareLibrary\Utils\Simple\ops\MatrixVectorMult_DDRM.cs" />
+    <Compile Include="GnssCompareLibrary\Utils\Simple\ops\NormOps_DDRM.cs" />
+    <Compile Include="GnssCompareLibrary\Utils\Simple\ops\NormOps_ZDRM.cs" />
+    <Compile Include="GnssCompareLibrary\Utils\Simple\ops\QRColPivDecompositionHouseholderColumn_DDRM.cs" />
+    <Compile Include="GnssCompareLibrary\Utils\Simple\ops\QRDecomposition.cs" />
+    <Compile Include="GnssCompareLibrary\Utils\Simple\ops\QRDecompositionHouseholderColumn_DDRM.cs" />
+    <Compile Include="GnssCompareLibrary\Utils\Simple\ops\QRDecompositionHouseholderColumn_ZDRM.cs" />
+    <Compile Include="GnssCompareLibrary\Utils\Simple\ops\QRDecompositionHouseholderTran_DDRM.cs" />
+    <Compile Include="GnssCompareLibrary\Utils\Simple\ops\QRDecompositionHouseholder_DDRB.cs" />
+    <Compile Include="GnssCompareLibrary\Utils\Simple\ops\QrHelperFunctions_DDRM.cs" />
+    <Compile Include="GnssCompareLibrary\Utils\Simple\ops\QrHelperFunctions_ZDRM.cs" />
+    <Compile Include="GnssCompareLibrary\Utils\Simple\ops\QrHouseHolderSolver_DDRB.cs" />
+    <Compile Include="GnssCompareLibrary\Utils\Simple\ops\QRPDecomposition.cs" />
+    <Compile Include="GnssCompareLibrary\Utils\Simple\ops\QRPDecomposition_F64.cs" />
+    <Compile Include="GnssCompareLibrary\Utils\Simple\ops\RandomMatrices_DDRM.cs" />
+    <Compile Include="GnssCompareLibrary\Utils\Simple\ops\ReducedRowEchelonForm.cs" />
+    <Compile Include="GnssCompareLibrary\Utils\Simple\ops\ReducedRowEchelonForm_F64.cs" />
+    <Compile Include="GnssCompareLibrary\Utils\Simple\ops\RrefGaussJordanRowPivot_DDRM.cs" />
+    <Compile Include="GnssCompareLibrary\Utils\Simple\ops\SimpleOperations_DDRM.cs" />
+    <Compile Include="GnssCompareLibrary\Utils\Simple\ops\SimpleOperations_DSCC.cs" />
+    <Compile Include="GnssCompareLibrary\Utils\Simple\ops\SimpleOperations_ZDRM.cs" />
+    <Compile Include="GnssCompareLibrary\Utils\Simple\ops\SingularOps_DDRM.cs" />
+    <Compile Include="GnssCompareLibrary\Utils\Simple\ops\SingularValueDecomposition.cs" />
+    <Compile Include="GnssCompareLibrary\Utils\Simple\ops\SingularValueDecomposition_F64.cs" />
+    <Compile Include="GnssCompareLibrary\Utils\Simple\ops\SolveNullSpace.cs" />
+    <Compile Include="GnssCompareLibrary\Utils\Simple\ops\SolveNullSpaceQRP_DDRM.cs" />
+    <Compile Include="GnssCompareLibrary\Utils\Simple\ops\SolveNullSpaceQR_DDRM.cs" />
+    <Compile Include="GnssCompareLibrary\Utils\Simple\ops\SolveNullSpaceSvd_DDRM.cs" />
+    <Compile Include="GnssCompareLibrary\Utils\Simple\ops\SpecializedOps_DDRM.cs" />
+    <Compile Include="GnssCompareLibrary\Utils\Simple\ops\SpecializedOps_ZDRM.cs" />
+    <Compile Include="GnssCompareLibrary\Utils\Simple\ops\SubmatrixOps_DDRM.cs" />
+    <Compile Include="GnssCompareLibrary\Utils\Simple\ops\SwitchingEigenDecomposition_DDRM.cs" />
+    <Compile Include="GnssCompareLibrary\Utils\Simple\ops\SymmetricQRAlgorithmDecomposition_DDRM.cs" />
+    <Compile Include="GnssCompareLibrary\Utils\Simple\ops\SymmetricQrAlgorithm_DDRM.cs" />
+    <Compile Include="GnssCompareLibrary\Utils\Simple\ops\SymmetricQREigenHelper_DDRM.cs" />
+    <Compile Include="GnssCompareLibrary\Utils\Simple\ops\TransposeAlgs_DDRM.cs" />
+    <Compile Include="GnssCompareLibrary\Utils\Simple\ops\TransposeAlgs_ZDRM.cs" />
+    <Compile Include="GnssCompareLibrary\Utils\Simple\ops\TriangularSolver_DDRB.cs" />
+    <Compile Include="GnssCompareLibrary\Utils\Simple\ops\TriangularSolver_DDRM.cs" />
+    <Compile Include="GnssCompareLibrary\Utils\Simple\ops\TriangularSolver_ZDRM.cs" />
+    <Compile Include="GnssCompareLibrary\Utils\Simple\ops\TridiagonalSimilarDecomposition.cs" />
+    <Compile Include="GnssCompareLibrary\Utils\Simple\ops\TridiagonalSimilarDecomposition_F64.cs" />
+    <Compile Include="GnssCompareLibrary\Utils\Simple\ops\UnrolledCholesky_DDRM.cs" />
+    <Compile Include="GnssCompareLibrary\Utils\Simple\ops\UnrolledDeterminantFromMinor_DDRM.cs" />
+    <Compile Include="GnssCompareLibrary\Utils\Simple\ops\UnrolledInverseFromMinor_DDRM.cs" />
+    <Compile Include="GnssCompareLibrary\Utils\Simple\ops\UtilDecompositons_DDRM.cs" />
+    <Compile Include="GnssCompareLibrary\Utils\Simple\ops\UtilDecompositons_ZDRM.cs" />
+    <Compile Include="GnssCompareLibrary\Utils\Simple\ops\VectorOps_DDRB.cs" />
+    <Compile Include="GnssCompareLibrary\Utils\Simple\ops\VectorVectorMult_DDRM.cs" />
+    <Compile Include="GnssCompareLibrary\Utils\Simple\ops\VectorVectorMult_ZDRM.cs" />
+    <Compile Include="GnssCompareLibrary\Utils\Simple\SimpleBase.cs" />
+    <Compile Include="GnssCompareLibrary\Utils\Simple\SimpleEVD.cs" />
+    <Compile Include="GnssCompareLibrary\Utils\Simple\SimpleMatrix.cs" />
+    <Compile Include="GnssCompareLibrary\Utils\Simple\SimpleOperations.cs" />
+    <Compile Include="GnssCompareLibrary\Utils\Simple\SimpleSparseOperations.cs" />
+    <Compile Include="GnssCompareLibrary\Utils\Simple\SimpleSVD.cs" />
+    <Compile Include="MainActivity.cs" />
+    <Compile Include="Resources\Resource.designer.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="GnssCompareLibrary\Constellations\Rinex\RinexNavigationParserGalileo.cs" />
+    <Compile Include="GnssCompareLibrary\Constellations\Rinex\EphemerisSystemGalileo.cs" />
+    <Compile Include="GnssCompareLibrary\Constellations\EphGalileo.cs" />
+    <Compile Include="GnssCompareLibrary\Constellations\GalEphemeris.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AboutResources.txt" />
+    <None Include="Assets\AboutAssets.txt" />
+    <None Include="Properties\AndroidManifest.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\Tabbar.xml" />
+    <AndroidResource Include="Resources\layout\Toolbar.xml" />
+    <AndroidResource Include="Resources\values\styles.xml" />
+    <AndroidResource Include="Resources\values\colors.xml" />
+    <AndroidResource Include="Resources\mipmap-anydpi-v26\icon.xml" />
+    <AndroidResource Include="Resources\mipmap-anydpi-v26\icon_round.xml" />
+    <AndroidResource Include="Resources\mipmap-hdpi\icon.png" />
+    <AndroidResource Include="Resources\mipmap-hdpi\launcher_foreground.png" />
+    <AndroidResource Include="Resources\mipmap-mdpi\icon.png" />
+    <AndroidResource Include="Resources\mipmap-mdpi\launcher_foreground.png" />
+    <AndroidResource Include="Resources\mipmap-xhdpi\icon.png" />
+    <AndroidResource Include="Resources\mipmap-xhdpi\launcher_foreground.png" />
+    <AndroidResource Include="Resources\mipmap-xxhdpi\icon.png" />
+    <AndroidResource Include="Resources\mipmap-xxhdpi\launcher_foreground.png" />
+    <AndroidResource Include="Resources\mipmap-xxxhdpi\icon.png" />
+    <AndroidResource Include="Resources\mipmap-xxxhdpi\launcher_foreground.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\drawable\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\GnssMeasurementSample\GnssMeasurementSample.csproj">
+      <Project>{9EDF773A-4EE5-4FAA-87DF-2D64E03E1AD4}</Project>
+      <Name>GnssMeasurementSample</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties TriggeredFromHotReload="False" />
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>
